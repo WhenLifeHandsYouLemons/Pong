@@ -59,11 +59,11 @@ def display_scores():
     score_right_y = score_left_y
     score_left = current_score[0]
 #CHANGE THE DIRECTORY BEFORE SENDING IT IN
-    score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/score_images/{score_left}.jpg")
+    score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_left}.jpg")
     multiplayer_game.blit(score_left, (score_left_x, score_left_y))
     score_right = current_score[1]
 #CHANGE THE DIRECTORY BEFORE SENDING IT IN
-    score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/score_images/{score_right}.jpg")
+    score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_right}.jpg")
     multiplayer_game.blit(score_right, (score_right_x, score_right_y))
 
 

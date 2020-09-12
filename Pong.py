@@ -109,15 +109,15 @@ def display_scores():
     score_left = multiplayer_current_score[0]
     score_right = multiplayer_current_score[1]
 #CHANGE THE DIRECTORY BEFORE SENDING IT IN
-    score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/score_images/{score_left}.jpg")
+    score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_left}.jpg")
     multiplayer_game.blit(score_left, (score_left_x, score_left_y))
 #CHANGE THE DIRECTORY BEFORE SENDING IT IN
-    score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/score_images/{score_right}.jpg")
+    score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_right}.jpg")
     multiplayer_game.blit(score_right, (score_right_x, score_right_y))
 
 
 def background_design_title_screen():
-    background_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/title_screen_images/no score background.jpg")
+    background_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/no score background.jpg")
     
     title_screen.blit(background_image, (0, 0))
     
@@ -126,13 +126,13 @@ def background_design_title_screen():
     pygame.draw.rect(title_screen, (255, 255, 255), (singleplayer_button_x - 5, singleplayer_button_y - 5, singleplayer_button_width + 10, singleplayer_button_height + 10))
     pygame.draw.rect(title_screen, (255, 255, 255), (multiplayer_button_x - 5, multiplayer_button_y - 5, multiplayer_button_width + 10, multiplayer_button_height + 10))
     
-    multiplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/title_screen_images/two_player.jpg")
+    multiplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/two_player.jpg")
     title_screen.blit(multiplayer_image, (multiplayer_button_x, multiplayer_button_y))
     
-    singleplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/title_screen_images/one_player.jpg")
+    singleplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/one_player.jpg")
     title_screen.blit(singleplayer_image, (singleplayer_button_x, singleplayer_button_y))
     
-    exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/title_screen_images/exit_game.jpg")
+    exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/exit_game.jpg")
     title_screen.blit(exit_image, (exit_button_x, exit_button_y))
 
 
@@ -143,7 +143,7 @@ def background_design_leaderboard_screen():
     pygame.draw.rect(leaderboard_screen, (255, 255, 255), (select_x, select_y, game_select_width, game_select_height))
     pygame.draw.rect(title_screen, (255, 255, 255), (exit_button_x - 5, leaderboard_exit_button_y - 5, exit_button_width + 10, exit_button_height + 10))
     
-    exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/title_screen_images/exit_game.jpg")
+    exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/exit_game.jpg")
     leaderboard_screen.blit(exit_image, (exit_button_x, leaderboard_exit_button_y))
 
 
@@ -308,14 +308,14 @@ while RUNNING_WINDOW:
 
         if multiplayer_current_score[0] == 11 or multiplayer_current_score[1] == 11:
             while i > 0:
-                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over.jpg")
+                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
                 multiplayer_game.blit(game_over_image, (0, 0))
 
                 time.sleep(0.5)
 
                 pygame.display.update()
 
-                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over_invert.jpg")
+                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
                 multiplayer_game.blit(game_over_image, (0, 0))
 
                 time.sleep(0.5)
@@ -323,7 +323,7 @@ while RUNNING_WINDOW:
 
                 pygame.display.update()
 
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over.jpg")
+            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
             multiplayer_game.blit(game_over_image, (0, 0))
 
             pygame.display.update()
@@ -364,13 +364,13 @@ while RUNNING_WINDOW:
 
             while RUNNING_WINDOW:
                 while i > 0:
-                    game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over.jpg")
+                    game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
                     multiplayer_game.blit(game_over_image, (0, 0))
                     time.sleep(0.5)
 
                     pygame.display.update()
 
-                    game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over_invert.jpg")
+                    game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
                     multiplayer_game.blit(game_over_image, (0, 0))
 
                     time.sleep(0.5)
@@ -378,7 +378,7 @@ while RUNNING_WINDOW:
 
                     pygame.display.update()
 
-                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Pygame/Pong/game_over_images/game_over.jpg")
+                game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
                 multiplayer_game.blit(game_over_image, (0, 0))
 
                 pygame.display.update()
