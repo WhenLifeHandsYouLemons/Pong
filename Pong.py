@@ -181,7 +181,7 @@ class Ball(pygame.sprite.Sprite):
         if self.y >= screen_height - (border_height * 2):
             self.direction = (180-self.direction)%360
 
-        if self.x >= paddle_right_x and paddle_left_y != 0:
+        if self.x >= paddle_right_x and paddle_left_x != 0:
             self.x = (screen_width / 2) - (ball_width / 2)
             self.y = (screen_height / 2) - (ball_height / 2)
     
@@ -193,6 +193,13 @@ class Ball(pygame.sprite.Sprite):
             print(multiplayer_current_score)
             multiplayer_current_score.remove(multiplayer_current_score[1])
             print(multiplayer_current_score)
+
+        if self.x >= paddle_right_x and paddle_left_x == 0:
+            self.x = (screen_width / 2) - (ball_width / 2)
+            self.y = (screen_height / 2) - (ball_height / 2)
+    
+            print("Lost")
+            time.sleep(2.5)
 
         if self.x <= paddle_left_x and paddle_left_y != 0:
             self.x = (screen_width / 2) - (ball_width / 2)
@@ -335,6 +342,7 @@ while RUNNING_WINDOW:
     while game_select_x >= singleplayer_button_x and game_select_x <= singleplayer_button_x + singleplayer_button_width - game_select_width and game_select_y >= singleplayer_button_y and game_select_y <= singleplayer_button_y + singleplayer_button_height - game_select_height and RUNNING_WINDOW:
 
         clock.tick(29)
+        paddle_left_x = 0
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -360,9 +368,10 @@ while RUNNING_WINDOW:
         balls.draw(multiplayer_game)
 
         if oneplayer_lost == True:
-            print("Lost")
+            print("Lost in singleplayer")
 
             while RUNNING_WINDOW:
+                print("Showing scoreboard")
                 while i > 0:
                     game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
                     multiplayer_game.blit(game_over_image, (0, 0))
