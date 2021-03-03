@@ -11,7 +11,7 @@ screen_height = 600
 multiplayer_game = pygame.display.set_mode((screen_width, screen_height))
 title_screen = pygame.display.set_mode((screen_width, screen_height))
 leaderboard_screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("Pong")
+pygame.display.set_caption("Testing Pong")
 
 border_width = 960
 border_height = 12
@@ -415,78 +415,10 @@ while RUNNING_WINDOW:
         if oneplayer_lost[0] == 1:
             print("Lost in singleplayer")
 
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
+            import Game_Over_Screen.py
 
-            pygame.display.update()
+            import Scoreboard_Pong.py
 
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
-            multiplayer_game.blit(game_over_image, (0, 0))
-
-            pygame.display.update()
-
-            while RUNNING_WINDOW:
-
-                for event in pygame.event.get():
-                    if event.type == pygame.QUIT:
-                        RUNNING_WINDOW = False
-
-                clock.tick(29)
-
-                multiplayer_game.blit(leaderboard_screen, (0, 0))
-
-                background_design_leaderboard_screen()
-
-                keys = pygame.key.get_pressed()
-
-                if keys[pygame.K_UP] and select_y > border_height:
-                    select_y -= game_select_speed
-                    print("Select moved up")
-                if keys[pygame.K_DOWN] and select_y < screen_height - game_select_width:
-                    select_y += game_select_speed
-                    print("Select moved down")
-                if keys[pygame.K_LEFT] and select_x > border_height:
-                    select_x -= game_select_speed
-                    print("Select moved left")
-                if keys[pygame.K_RIGHT] and select_x < screen_width - game_select_width:
-                    select_x += game_select_speed
-                    print("Select moved right")
-
-                if select_x >= exit_button_x and select_x <= exit_button_x + exit_button_width - game_select_width and select_y >= leaderboard_exit_button_y and select_y <= leaderboard_exit_button_y + exit_button_height - game_select_height and RUNNING_WINDOW:
-                    sys.exit()
-                
-                pygame.display.update()
-            
         pygame.display.update()
 
     pygame.display.update()
