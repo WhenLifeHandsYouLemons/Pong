@@ -1,5 +1,15 @@
 import pygame
+import sys
+import os
 pygame.init()
+
+# For file searching when in .EXE format
+def get_true_filename(filename):
+    try:
+        base = sys._MEIPASS
+    except Exception:
+        base = os.path.abspath(".")
+    return os.path.join(base, filename)
 
 screen_width = 960
 screen_height = 600
@@ -13,6 +23,7 @@ while i != 0:
         if event.type == pygame.QUIT:
             RUNNING_WINDOW = False
 
+    # game_over_image = pygame.image.load(get_true_filename("game_over.jpg"))
     game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
     multiplayer_game.blit(game_over_image, (0, 0))
 
@@ -20,6 +31,7 @@ while i != 0:
 
     pygame.display.update()
 
+    # game_over_image = pygame.image.load(get_true_filename("game_over_invert.jpg"))
     game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over_invert.jpg")
     multiplayer_game.blit(game_over_image, (0, 0))
 
@@ -29,9 +41,10 @@ while i != 0:
 
     i = i - 1
 
+# game_over_image = pygame.image.load(get_true_filename("game_over.jpg"))
 game_over_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/game_over_images/game_over.jpg")
 multiplayer_game.blit(game_over_image, (0, 0))
 
 pygame.display.update()
 
-pygame.time.wait(500)
+pygame.time.wait(2000)

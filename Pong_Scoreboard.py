@@ -1,6 +1,15 @@
 import sys
+import os
 import pygame
 pygame.init()
+
+# For file searching when in .EXE format
+def get_true_filename(filename):
+    try:
+        base = sys._MEIPASS
+    except Exception:
+        base = os.path.abspath(".")
+    return os.path.join(base, filename)
 
 clock = pygame.time.Clock()
 
@@ -38,7 +47,8 @@ def background_design_leaderboard_screen():
 
     pygame.draw.rect(leaderboard_screen, (255, 255, 255), (select_x, select_y, game_select_width, game_select_height))
     pygame.draw.rect(title_screen, (255, 255, 255), (exit_button_x - 5, leaderboard_exit_button_y - 5, exit_button_width + 10, exit_button_height + 10))
-    
+
+    # exit_image = pygame.image.load(get_true_filename("exit_game.jpg"))
     exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/exit_game.jpg")
     leaderboard_screen.blit(exit_image, (exit_button_x, leaderboard_exit_button_y))
 
