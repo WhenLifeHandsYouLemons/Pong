@@ -1,4 +1,6 @@
 # Pong
  This is a Pong game I created myself for my Computer Science course!
 ## Latest Release
- Click here to download the latest release!
+ Click on the link below to download the latest release!
+
+https://github.com/WhenLifeHandsYouLemons/Pong/releases/
