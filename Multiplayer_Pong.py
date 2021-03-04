@@ -1,7 +1,15 @@
+"""
+Made By - Sooraj Sannabhadti
+GitHub - https://github.com/WhenLifeHandsYouLemons
+Twitter - https://twitter.com/LemonsHandYou
+Instagram - https://www.instagram.com/whenlifehandsyoulemons1/
+Latest Release - https://github.com/WhenLifeHandsYouLemons/Pong/releases
+"""
 import pygame
 import sys
 import math
 import random
+import os
 from past.builtins.misc import execfile
 pygame.init()
 
@@ -72,11 +80,15 @@ def display_scores_multiplayer():
     score_right_y = score_left_y
     score_left = multiplayer_current_score[0]
     score_right = multiplayer_current_score[1]
+
     # score_left = pygame.image.load(get_true_filename(f"{score_left}.jpg"))
     score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_left}.jpg")
+
     multiplayer_game.blit(score_left, (score_left_x, score_left_y))
+
     # score_right = pygame.image.load(get_true_filename(f"{score_right}.jpg"))
     score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_right}.jpg")
+
     multiplayer_game.blit(score_right, (score_right_x, score_right_y))
 
 # For the ball movement
@@ -189,6 +201,7 @@ while RUNNING_WINDOW == True:
     if multiplayer_current_score[0] == 11 or multiplayer_current_score[1] == 11:
         # execfile(get_true_filename("Game_Over_Screen.py"))
         execfile("C:/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/Game_Over_Screen.py")
+
         sys.exit()
 
 sys.exit()

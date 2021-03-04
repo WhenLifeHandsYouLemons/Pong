@@ -1,3 +1,10 @@
+"""
+Made By - Sooraj Sannabhadti
+GitHub - https://github.com/WhenLifeHandsYouLemons
+Twitter - https://twitter.com/LemonsHandYou
+Instagram - https://www.instagram.com/whenlifehandsyoulemons1/
+Latest Release - https://github.com/WhenLifeHandsYouLemons/Pong/releases
+"""
 import pygame
 import sys
 import os
@@ -17,7 +24,7 @@ screen_width = 960
 screen_height = 600
 
 title_screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("Testing Pong")
+pygame.display.set_caption("Pong")
 
 border_width = 960
 border_height = 12
@@ -54,6 +61,7 @@ clock = pygame.time.Clock()
 def background_design_title_screen():
     # background_image = pygame.image.load(get_true_filename("no score background.jpg"))
     background_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/no score background.jpg")
+
     title_screen.blit(background_image, (0, 0))
 
     pygame.draw.rect(title_screen, (255, 255, 255), (game_select_x, game_select_y, game_select_width, game_select_height))
@@ -63,14 +71,17 @@ def background_design_title_screen():
 
     # multiplayer_image = pygame.image.load(get_true_filename("two_player.jpg"))
     multiplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/two_player.jpg")
+
     title_screen.blit(multiplayer_image, (multiplayer_button_x, multiplayer_button_y))
 
     # singleplayer_image = pygame.image.load(get_true_filename("one_player.jpg"))
     singleplayer_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/one_player.jpg")
+
     title_screen.blit(singleplayer_image, (singleplayer_button_x, singleplayer_button_y))
 
     # exit_image = pygame.image.load(get_true_filename("exit_game.jpg"))
     exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/exit_game.jpg")
+
     title_screen.blit(exit_image, (exit_button_x, exit_button_y))
 
 # Main loop

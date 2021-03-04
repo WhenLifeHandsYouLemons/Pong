@@ -1,3 +1,10 @@
+"""
+Made By - Sooraj Sannabhadti
+GitHub - https://github.com/WhenLifeHandsYouLemons
+Twitter - https://twitter.com/LemonsHandYou
+Instagram - https://www.instagram.com/whenlifehandsyoulemons1/
+Latest Release - https://github.com/WhenLifeHandsYouLemons/Pong/releases
+"""
 import pygame
 import random
 import math
@@ -19,7 +26,7 @@ screen_width = 960
 screen_height = 600
 
 singleplayer_game = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("Single Player Pong")
+pygame.display.set_caption("Singleplayer Pong")
 
 clock = pygame.time.Clock()
 
@@ -80,11 +87,15 @@ def display_scores_singleplayer():
     score_right_y = score_left_y
     score_left = singleplayer_current_score[0]
     score_right = singleplayer_current_score[1]
+
     # score_left = pygame.image.load(get_true_filename(f"{score_left}.jpg"))
     score_left = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_left}.jpg")
+
     singleplayer_game.blit(score_left, (score_left_x, score_left_y))
+
     # score_right = pygame.image.load(get_true_filename(f"{score_right}.jpg"))
     score_right = pygame.image.load(f"/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/score_images/{score_right}.jpg")
+
     singleplayer_game.blit(score_right, (score_right_x, score_right_y))
 
 # For the ball movement equations
@@ -162,9 +173,6 @@ ball = Ball()
 balls = pygame.sprite.Group()
 balls.add(ball)
 
-
-
-
 # Main Loop
 RUNNING_WINDOW = True
 while RUNNING_WINDOW == True:
@@ -197,6 +205,7 @@ while RUNNING_WINDOW == True:
 
         # execfile(get_true_filename("Game_Over_Screen.py"))
         execfile("C:/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/Game_Over_Screen.py")
+
         # execfile(get_true_filename("Pong_Scoreboard.py"))
         execfile("C:/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/Pong_Scoreboard.py")
 

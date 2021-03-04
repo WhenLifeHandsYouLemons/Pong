@@ -1,3 +1,10 @@
+"""
+Made By - Sooraj Sannabhadti
+GitHub - https://github.com/WhenLifeHandsYouLemons
+Twitter - https://twitter.com/LemonsHandYou
+Instagram - https://www.instagram.com/whenlifehandsyoulemons1/
+Latest Release - https://github.com/WhenLifeHandsYouLemons/Pong/releases
+"""
 import sys
 import os
 import pygame
@@ -50,6 +57,7 @@ def background_design_leaderboard_screen():
 
     # exit_image = pygame.image.load(get_true_filename("exit_game.jpg"))
     exit_image = pygame.image.load("/Users/2005s/Documents/Visual Studio Code/Python/Pygame/Pong/title_screen_images/exit_game.jpg")
+
     leaderboard_screen.blit(exit_image, (exit_button_x, leaderboard_exit_button_y))
 
 
